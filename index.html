@@ -9,10 +9,22 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- Import Showdown library for markdown conversion -->
     <script src="libs/showdown.min.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jwt-decode@4.0.0/build/cjs/index.min.js"></script> -->
+
+    <script>
+        window.new_lock = function () {
+            var unlock, lock = new Promise((res, rej) => { unlock = res });
+            return [lock, unlock];
+        };
+        window.new_id = function () {
+            return `${Date.now()}-${Math.random().toString().replace('.', '')}`;
+        };
+    </script>
 <style>*{font-family:sans-serif}html,body{margin:0;padding:0;width:100vw;height:100vh;overflow:hidden;background-color:#efedf4}</style><link rel="stylesheet" href="styles-ZLC26CI5.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-ZLC26CI5.css"></noscript></head>
 
 <body>
     <app-root></app-root>
-<script src="main-QQYGF4GI.js" type="module"></script></body>
+<script src="polyfills-KYZQLWB5.js" type="module"></script><script src="main-MLNLT2XI.js" type="module"></script></body>
 
 </html>
